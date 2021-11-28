@@ -1,0 +1,123 @@
+@import "variables";
+@import "reset";
+@import "globals";
+@import "breakpoints";
+
+body {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem;
+  background-color: $Pale-blue;
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: repeat-x;
+}
+
+.order-summary {
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: white;
+  transition: max-width 300ms;
+  max-width: 32.7rem;
+  @include desktop {
+    max-width: 45rem;
+  }
+}
+
+.img-container {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+.text-container {
+  color: $Dark-blue;
+  padding: 3.2rem 2.4rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1.6rem;
+  .text-heading {
+    font-size: $f-s-heading;
+    font-weight: 900;
+  }
+  .text-description {
+    color: $Desaturated-blue;
+    font-size: $f-s-body;
+    text-align: center;
+    line-height: $l-h-body;
+    @include desktop {
+      padding: 0 3rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .order-plan {
+    width: 100%;
+    padding: 1.7rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @include desktop {
+      padding: 0 4.5rem;
+    }
+    :nth-child(3) {
+      margin-left: auto;
+    }
+    font-size: $f-s-small;
+    .chosen-plan {
+      font-weight: 700;
+    }
+
+    .chosen-service {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.5rem;
+
+      .pricing {
+        color: $Desaturated-blue;
+      }
+    }
+
+    .change {
+      border: none;
+      background-color: transparent;
+      text-decoration: underline;
+      color: $Bright-blue;
+      font-weight: 900;
+      &:hover {
+        cursor: pointer;
+        color: lighten($Bright-blue, 20%);
+        text-decoration: none;
+      }
+    }
+
+  }
+    .payment{
+      @include button-reset;
+      margin-top: 3rem;
+      width: 100%;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      background-color: $Bright-blue;
+      color: white;
+      font-weight: 700;
+      &:hover{
+        cursor: pointer;
+        background-color: lighten($Bright-blue, 20%);
+      }
+    }
+    .cancel{
+      @include button-reset;
+      color: $Desaturated-blue;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+}

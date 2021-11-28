@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+@mixin button-reset {
+  font-size: $f-s-body;
+  border: none;
+  background-color: transparent;
+}

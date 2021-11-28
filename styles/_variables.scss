@@ -1,0 +1,19 @@
+// Layout
+$mobile: 375px;
+$desktop: 1440px;
+
+// Colors
+
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+// Fonts
+
+$f-s-heading: clamp(2.2rem, calc(1.6275rem + 1.5267vw), 2.8rem);
+$f-s-body: clamp(1.5rem, calc(1.4046rem + 0.2545vw), 1.6rem);
+$f-s-small: clamp(1.4rem, calc(1.2092rem + 0.5089vw), 1.6rem);
+$l-h-body: 2.5rem;
